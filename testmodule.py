@@ -50,7 +50,7 @@ class Basic_Object(Props_Encapsulation):
 
     # direct setting of attributes is forbidden
     def __setattr__(self, name, value):
-        allowed_attrs = ('prop_total_amount', 'manage_props')
+        allowed_attrs = ('manage_props',)
 
         if name in allowed_attrs and not hasattr(self, name):
             object.__setattr__(self, name, value)
